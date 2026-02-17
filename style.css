@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #00bcd4; /* Ein modernes Cyan-Blau */
+    --bg-dark: #1a1a1a;
+    --text-light: #f4f4f4;
+    --card-bg: #2d2d2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1500&q=80'); /* Hintergrundbild mit Map-Vibe */
+    background-size: cover;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Projekte */
+#projects { padding: 80px 5%; }
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-bottom: 4px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.project-card:hover { transform: translateY(-5px); }
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.skills-container span {
+    background: #444;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
